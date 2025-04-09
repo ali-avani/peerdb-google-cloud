@@ -8,8 +8,6 @@ This repository provides a Docker Compose setup to run [PeerDB](https://github.c
 - `docker-compose.gc.yml`: Compose override that adds DNS resolver for GCP networking.
 - `.env.sample`: Sample environment config.
 - `Makefile`: Shortcuts for Docker Compose tasks.
-- `nginx.conf`: Template for Nginx config.
-- `setup-nginx.sh`: Script to configure Nginx as a reverse proxy.
 
 ---
 
@@ -47,27 +45,6 @@ make up
 ```
 
 This runs `peerdb-base/docker-compose.yml` extended by `docker-compose.gc.yml` to enable DNS resolution of internal IPs (e.g. `postgres.internal`).
-
----
-
-### 4. Set up Nginx as reverse proxy (optional)
-
-To serve PeerDB UI on a custom domain:
-
-```bash
-chmod +x setup-nginx.sh
-./setup-nginx.sh
-```
-
-This script will:
-
-- Ask for your desired domain (e.g. `peerdb.example.com`)
-- Install Nginx if not already installed
-- Replace `DOMAIN_PLACEHOLDER` in `nginx.conf` with your domain
-- Place the config into `/etc/nginx/sites-available/peerdb`
-- Enable the site and reload Nginx
-
-After completion, visit your domain (e.g., `http://peerdb.example.com`) to access PeerDB UI.
 
 ---
 
