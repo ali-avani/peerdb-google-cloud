@@ -18,7 +18,7 @@ This repository provides a Docker Compose setup to run [PeerDB](https://github.c
 ### 1. Clone the repo with submodules
 
 ```bash
-git clone --recurse-submodules https://github.com/your-username/peerdb-google-cloud.git
+git clone --recurse-submodules https://github.com/ali-avani/peerdb-google-cloud.git
 cd peerdb-google-cloud
 ```
 
