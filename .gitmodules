@@ -1,3 +1,4 @@
 [submodule "peerdb-base"]
 	path = peerdb-base
 	url = https://github.com/PeerDB-io/peerdb
+	branch = main
