@@ -1,0 +1,4 @@
+services:
+  peerdb:
+    dns:
+      - ${GCP_DNS_IP}
